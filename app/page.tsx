@@ -88,7 +88,7 @@ export default function Home() {
               alt="AudioZoneSL"
               width={240}
               height={240}
-              className="relative drop-shadow-[0_0_30px_rgba(0,212,255,0.4)] w-36 h-36 sm:w-44 sm:h-44 md:w-60 md:h-60"
+              className="relative drop-shadow-[0_0_30px_rgba(0,212,255,0.4)] w-24 h-24 sm:w-40 sm:h-40 md:w-60 md:h-60"
               priority
             />
           </div>
