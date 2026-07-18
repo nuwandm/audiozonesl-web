@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-orbitron: 'Orbitron', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #060d1a;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060d1a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00d4ff, #00b894);
+  border-radius: 3px;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes particle-drift {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
+}
+
+@keyframes ring-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes ring-rotate-reverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes eq-bar {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes waveform {
+  0%, 100% { transform: scaleY(0.2); }
+  25% { transform: scaleY(0.8); }
+  50% { transform: scaleY(1); }
+  75% { transform: scaleY(0.5); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes border-flow {
+  0% { border-image-source: linear-gradient(0deg, #00d4ff, #00b894); }
+  25% { border-image-source: linear-gradient(90deg, #00d4ff, #00b894); }
+  50% { border-image-source: linear-gradient(180deg, #00d4ff, #00b894); }
+  75% { border-image-source: linear-gradient(270deg, #00d4ff, #00b894); }
+  100% { border-image-source: linear-gradient(360deg, #00d4ff, #00b894); }
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #00d4ff 0%, #00b894 50%, #0984e3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-shimmer {
+  background: linear-gradient(90deg, #00d4ff, #00b894, #ffffff, #00b894, #00d4ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+.glass {
+  background: rgba(13, 31, 53, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.glass-strong {
+  background: rgba(13, 31, 53, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.1);
+}
+
+.glow-teal {
+  box-shadow: 0 0 20px rgba(0, 184, 148, 0.3), 0 0 60px rgba(0, 184, 148, 0.1);
+}
+
+.neon-border {
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.neon-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #00d4ff, #00b894, #0984e3);
+  z-index: -1;
+}
+
+.scan-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+  animation: scan-line 4s linear infinite;
+  opacity: 0.4;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #00d4ff;
+  animation: particle-drift linear infinite;
+}
+
+.eq-bar {
+  transform-origin: bottom;
+  animation: eq-bar ease-in-out infinite alternate;
+}
+
+.input-glow:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.5), 0 0 20px rgba(0, 212, 255, 0.2);
+}
