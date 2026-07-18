@@ -174,10 +174,27 @@ export default function Home() {
             href="https://wa.me/94710958090"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs text-white/30 hover:text-green-400 transition-colors duration-300"
+            className="group relative flex items-center gap-3 px-5 py-2.5 rounded-full text-sm font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95"
+            style={{
+              background: "linear-gradient(135deg, rgba(37,211,102,0.15) 0%, rgba(37,211,102,0.05) 100%)",
+              border: "1px solid rgba(37,211,102,0.35)",
+              boxShadow: "0 0 20px rgba(37,211,102,0.15)",
+            }}
           >
-            <WhatsAppIcon size={12} />
-            <span>+94 71 095 8090</span>
+            {/* Animated glow on hover */}
+            <div
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"
+              style={{ background: "linear-gradient(135deg, rgba(37,211,102,0.25) 0%, rgba(37,211,102,0.1) 100%)", boxShadow: "0 0 30px rgba(37,211,102,0.4)" }}
+            />
+            {/* Pulse ring */}
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
+            </span>
+            <span className="relative flex items-center gap-2 text-green-400 group-hover:text-white transition-colors duration-300">
+              <WhatsAppIcon size={16} />
+              +94 71 095 8090
+            </span>
           </a>
         </motion.div>
 
