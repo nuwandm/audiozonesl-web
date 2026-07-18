@@ -173,7 +173,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-end gap-4 sm:gap-5 w-full max-w-xs sm:w-auto sm:max-w-none">
             {/* WhatsApp Inquiries */}
             <div className="flex flex-col items-center gap-1.5 w-full sm:w-auto">
-              <span className="text-[9px] tracking-[0.2em] uppercase text-white/30 font-medium">Inquiries</span>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-cyan-400/70 font-semibold">Inquiries</span>
             <a
               href="https://wa.me/94710958090"
               target="_blank"
@@ -199,7 +199,7 @@ export default function Home() {
 
             {/* Join WhatsApp Group */}
             <div className="flex flex-col items-center gap-1.5 w-full sm:w-auto">
-              <span className="text-[9px] tracking-[0.2em] uppercase text-white/30 font-medium">Community</span>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-green-400/70 font-semibold">Community</span>
               <a
                 href="https://chat.whatsapp.com/JWTj5x7bOlfEEmaVfY6MJd"
                 target="_blank"
