@@ -170,32 +170,54 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <a
-            href="https://wa.me/94710958090"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex items-center gap-3 px-5 py-2.5 rounded-full text-sm font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95"
-            style={{
-              background: "linear-gradient(135deg, rgba(37,211,102,0.15) 0%, rgba(37,211,102,0.05) 100%)",
-              border: "1px solid rgba(37,211,102,0.35)",
-              boxShadow: "0 0 20px rgba(37,211,102,0.15)",
-            }}
-          >
-            {/* Animated glow on hover */}
-            <div
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"
-              style={{ background: "linear-gradient(135deg, rgba(37,211,102,0.25) 0%, rgba(37,211,102,0.1) 100%)", boxShadow: "0 0 30px rgba(37,211,102,0.4)" }}
-            />
-            {/* Pulse ring */}
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
-            </span>
-            <span className="relative flex items-center gap-2 text-green-400 group-hover:text-white transition-colors duration-300">
-              <WhatsAppIcon size={16} />
-              +94 71 095 8090
-            </span>
-          </a>
+          <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4 sm:gap-5">
+            {/* WhatsApp Inquiries */}
+            <div className="flex flex-col items-center gap-1.5">
+              <span className="text-[9px] tracking-[0.2em] uppercase text-white/30 font-medium">Inquiries</span>
+            <a
+              href="https://wa.me/94710958090"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center gap-3 px-5 py-2.5 rounded-full text-sm font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95"
+              style={{
+                background: "linear-gradient(135deg, rgba(37,211,102,0.15) 0%, rgba(37,211,102,0.05) 100%)",
+                border: "1px solid rgba(37,211,102,0.35)",
+                boxShadow: "0 0 20px rgba(37,211,102,0.15)",
+              }}
+            >
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" style={{ background: "linear-gradient(135deg, rgba(37,211,102,0.25) 0%, rgba(37,211,102,0.1) 100%)", boxShadow: "0 0 30px rgba(37,211,102,0.4)" }} />
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
+              </span>
+              <span className="relative flex items-center gap-2 text-green-400 group-hover:text-white transition-colors duration-300">
+                <WhatsAppIcon size={16} />
+                +94 71 095 8090
+              </span>
+            </a>
+            </div>
+
+            {/* Join WhatsApp Group */}
+            <div className="flex flex-col items-center gap-1.5">
+              <span className="text-[9px] tracking-[0.2em] uppercase text-white/30 font-medium">Community</span>
+              <a
+                href="https://chat.whatsapp.com/JWTj5x7bOlfEEmaVfY6MJd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95"
+                style={{
+                  background: "linear-gradient(135deg, rgba(37,211,102,0.9) 0%, rgba(18,140,60,0.9) 100%)",
+                  boxShadow: "0 0 25px rgba(37,211,102,0.35)",
+                }}
+              >
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" style={{ background: "linear-gradient(135deg, rgba(37,211,102,1) 0%, rgba(18,140,60,1) 100%)", boxShadow: "0 0 40px rgba(37,211,102,0.6)" }} />
+                <span className="relative flex items-center gap-2 text-white">
+                  <WhatsAppIcon size={16} />
+                  Join Our Group
+                </span>
+              </a>
+            </div>
+          </div>
         </motion.div>
 
         {/* Footer */}
