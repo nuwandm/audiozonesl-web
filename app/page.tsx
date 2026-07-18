@@ -170,15 +170,15 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4 sm:gap-5">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-end gap-4 sm:gap-5 w-full max-w-xs sm:w-auto sm:max-w-none">
             {/* WhatsApp Inquiries */}
-            <div className="flex flex-col items-center gap-1.5">
+            <div className="flex flex-col items-center gap-1.5 w-full sm:w-auto">
               <span className="text-[9px] tracking-[0.2em] uppercase text-white/30 font-medium">Inquiries</span>
             <a
               href="https://wa.me/94710958090"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center gap-3 px-5 py-2.5 rounded-full text-sm font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95"
+              className="group relative flex items-center justify-center gap-3 px-5 py-2.5 rounded-full text-sm font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto"
               style={{
                 background: "linear-gradient(135deg, rgba(37,211,102,0.15) 0%, rgba(37,211,102,0.05) 100%)",
                 border: "1px solid rgba(37,211,102,0.35)",
@@ -198,13 +198,13 @@ export default function Home() {
             </div>
 
             {/* Join WhatsApp Group */}
-            <div className="flex flex-col items-center gap-1.5">
+            <div className="flex flex-col items-center gap-1.5 w-full sm:w-auto">
               <span className="text-[9px] tracking-[0.2em] uppercase text-white/30 font-medium">Community</span>
               <a
                 href="https://chat.whatsapp.com/JWTj5x7bOlfEEmaVfY6MJd"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95"
+                className="group relative flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto"
                 style={{
                   background: "linear-gradient(135deg, rgba(37,211,102,0.9) 0%, rgba(18,140,60,0.9) 100%)",
                   boxShadow: "0 0 25px rgba(37,211,102,0.35)",
