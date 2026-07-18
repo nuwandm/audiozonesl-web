@@ -49,7 +49,7 @@ function UnitBlock({ value, label }: UnitBlockProps) {
   return (
     <div className="flex flex-col items-center gap-2">
       <div
-        className="relative glass-strong rounded-2xl w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center overflow-hidden"
+        className="relative glass-strong rounded-2xl w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex items-center justify-center overflow-hidden"
         style={{
           boxShadow: "0 0 30px rgba(0,212,255,0.2), inset 0 1px 0 rgba(255,255,255,0.05)",
         }}
@@ -61,7 +61,7 @@ function UnitBlock({ value, label }: UnitBlockProps) {
           }}
         />
         <span
-          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gradient transition-all duration-300"
+          className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-gradient transition-all duration-300"
           style={{
             transform: flip ? "translateY(-8px)" : "translateY(0)",
             opacity: flip ? 0.3 : 1,
@@ -78,7 +78,7 @@ function UnitBlock({ value, label }: UnitBlockProps) {
           }}
         />
       </div>
-      <span className="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-cyan-400/70">
+      <span className="text-[9px] sm:text-xs font-medium tracking-[0.2em] uppercase text-cyan-400/70">
         {label}
       </span>
     </div>

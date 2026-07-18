@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Facebook, Mail } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
-import EmailSignup from "@/components/EmailSignup";
 
 const ParticleField = dynamic(() => import("@/components/ParticleField"), { ssr: false });
 const AudioVisualizer = dynamic(() => import("@/components/AudioVisualizer"), { ssr: false });
@@ -69,7 +68,7 @@ export default function Home() {
       <div className="scan-effect fixed inset-0 z-0 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center w-full px-4 py-16 sm:py-20 gap-12 sm:gap-16">
+      <div className="relative z-10 flex flex-col items-center w-full px-5 sm:px-8 py-10 sm:py-16 md:py-20 gap-8 sm:gap-10 md:gap-14 max-w-screen-md mx-auto">
 
         {/* Logo */}
         <motion.div
@@ -77,7 +76,7 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           custom={0}
-          className="flex flex-col items-center gap-3"
+          className="flex flex-col items-center gap-2 sm:gap-3"
         >
           <div className="relative">
             <div
@@ -89,19 +88,19 @@ export default function Home() {
               alt="AudioZoneSL"
               width={240}
               height={240}
-              className="relative drop-shadow-[0_0_30px_rgba(0,212,255,0.4)]"
+              className="relative drop-shadow-[0_0_30px_rgba(0,212,255,0.4)] w-36 h-36 sm:w-44 sm:h-44 md:w-60 md:h-60"
               priority
             />
           </div>
 
-          <div className="text-center">
+          <div className="text-center px-2">
             <h1
-              className="font-display text-3xl sm:text-4xl md:text-5xl font-black tracking-widest text-gradient-shimmer uppercase"
-              style={{ fontFamily: "'Orbitron', sans-serif", letterSpacing: "0.15em" }}
+              className="font-display text-2xl sm:text-3xl md:text-5xl font-black tracking-widest text-gradient-shimmer uppercase"
+              style={{ fontFamily: "'Orbitron', sans-serif", letterSpacing: "0.12em" }}
             >
               AudioZoneSL
             </h1>
-            <p className="mt-1 text-xs sm:text-sm tracking-[0.35em] uppercase text-cyan-400/60 font-medium">
+            <p className="mt-1 text-[10px] sm:text-xs md:text-sm tracking-[0.3em] uppercase text-cyan-400/60 font-medium">
               Where The Community Begins
             </p>
           </div>
@@ -113,9 +112,9 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           custom={0.15}
-          className="w-full max-w-xl h-16 sm:h-20"
+          className="w-full max-w-xs sm:max-w-md md:max-w-xl h-12 sm:h-16 md:h-20"
         >
-          <AudioVisualizer barCount={52} />
+          <AudioVisualizer barCount={36} />
         </motion.div>
 
         {/* Tagline */}
@@ -124,9 +123,9 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           custom={0.25}
-          className="text-center max-w-lg"
+          className="text-center max-w-xs sm:max-w-sm md:max-w-lg px-2"
         >
-          <p className="text-sm sm:text-base text-white/50 leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-white/50 leading-relaxed">
             Professional mixing, mastering, sound design, and music production.
             Connect with audio engineers, producers, and artists across Sri Lanka.
           </p>
@@ -138,26 +137,12 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           custom={0.35}
-          className="flex flex-col items-center gap-6"
+          className="flex flex-col items-center gap-4 sm:gap-6 w-full"
         >
-          <p className="text-xs tracking-[0.3em] uppercase text-cyan-400/50 font-medium">
+          <p className="text-[10px] sm:text-xs tracking-[0.3em] uppercase text-cyan-400/50 font-medium">
             Launching In
           </p>
           <CountdownTimer />
-        </motion.div>
-
-        {/* Email signup */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0.45}
-          className="w-full max-w-md flex flex-col items-center gap-4"
-        >
-          <p className="text-sm text-white/50 text-center">
-            Be the first to know when we go live.
-          </p>
-          <EmailSignup />
         </motion.div>
 
         {/* Social links */}
@@ -166,12 +151,12 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           custom={0.55}
-          className="flex flex-col items-center gap-4"
+          className="flex flex-col items-center gap-3 sm:gap-4"
         >
-          <p className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium">
+          <p className="text-[10px] sm:text-xs tracking-[0.3em] uppercase text-white/30 font-medium">
             Connect With Us
           </p>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 sm:gap-4">
             {SOCIAL_LINKS.map(({ href, label, icon: Icon, color, glow }) => (
               <a
                 key={label}
@@ -179,7 +164,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className={`glass rounded-xl p-3 text-white/40 transition-all duration-300 ${color} ${glow} hover:-translate-y-1`}
+                className={`glass rounded-xl p-3 sm:p-3.5 text-white/40 transition-all duration-300 ${color} ${glow} hover:-translate-y-1 active:scale-95`}
               >
                 <Icon size={20} />
               </a>
@@ -189,7 +174,7 @@ export default function Home() {
             href="https://wa.me/94710958090"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs text-white/30 hover:text-green-400 transition-colors duration-300 mt-1"
+            className="flex items-center gap-2 text-xs text-white/30 hover:text-green-400 transition-colors duration-300"
           >
             <WhatsAppIcon size={12} />
             <span>+94 71 095 8090</span>
@@ -202,7 +187,7 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           custom={0.65}
-          className="text-xs text-white/20 text-center"
+          className="text-[10px] sm:text-xs text-white/20 text-center pb-2"
         >
           &copy; {new Date().getFullYear()} AudioZoneSL. All rights reserved.
         </motion.p>
