@@ -68,7 +68,7 @@ export default function Home() {
       <div className="scan-effect fixed inset-0 z-0 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center w-full px-5 sm:px-8 py-10 sm:py-16 md:py-20 gap-8 sm:gap-10 md:gap-14 max-w-screen-md mx-auto">
+      <div className="relative z-10 flex flex-col items-center w-full px-5 sm:px-8 py-6 sm:py-16 md:py-20 gap-6 sm:gap-10 md:gap-14 max-w-screen-md mx-auto">
 
         {/* Logo */}
         <motion.div
@@ -88,7 +88,7 @@ export default function Home() {
               alt="AudioZoneSL"
               width={240}
               height={240}
-              className="relative drop-shadow-[0_0_30px_rgba(0,212,255,0.4)] w-24 h-24 sm:w-40 sm:h-40 md:w-60 md:h-60"
+              className="relative drop-shadow-[0_0_30px_rgba(0,212,255,0.4)] w-20 h-20 sm:w-36 sm:h-36 md:w-56 md:h-56"
               priority
             />
           </div>
